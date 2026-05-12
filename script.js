@@ -1,24 +1,28 @@
-const words = [
-  "ART",
-  "NEO",
-  "SHALALA",
-  "TAP",
-  "VISIONARY",
-  "WYLD"
-];
+window.onload = function () {
 
-let index = 0;
+  const words = [
+    "ART",
+    "NEO",
+    "SHALALA",
+    "VISIONARY",
+    "WYLD"
+  ];
 
-const changingWord = document.getElementById("changing-word");
+  let index = 0;
 
-const interval = setInterval(() => {
+  const changingWord = document.getElementById("changing-word");
 
-  index++;
+  const interval = setInterval(() => {
 
-  changingWord.textContent = words[index];
+    index++;
 
-  if(index === words.length - 1){
-    clearInterval(interval);
-  }
+    changingWord.textContent = words[index];
 
+    if(index === words.length - 1){
+      clearInterval(interval);
+    }
+
+  }, 1500);
+
+};
 }, 1500);
