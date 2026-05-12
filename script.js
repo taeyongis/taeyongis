@@ -4,7 +4,6 @@ const words = [
   "SHALALA",
   "TAP",
   "VISIONARY",
-  "EXPERIMENTAL",
   "WYLD"
 ];
 
@@ -12,10 +11,14 @@ let index = 0;
 
 const changingWord = document.getElementById("changing-word");
 
-setInterval(() => {
+const interval = setInterval(() => {
 
-  index = (index + 1) % words.length;
+  index++;
 
   changingWord.textContent = words[index];
 
-}, 2000);
+  if(index === words.length - 1){
+    clearInterval(interval);
+  }
+
+}, 1500);
