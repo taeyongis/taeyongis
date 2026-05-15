@@ -3,6 +3,7 @@ body{
   color:white;
   margin:0;
   font-family:Arial, sans-serif;
+  overflow-x:hidden;
 }
 
 /* TOPBAR */
@@ -11,7 +12,9 @@ body{
   position:fixed;
   top:0;
   left:0;
+
   width:100%;
+
   padding:25px 40px;
 
   display:flex;
@@ -21,6 +24,7 @@ body{
   box-sizing:border-box;
 
   background:rgba(0,0,0,0.4);
+
   backdrop-filter:blur(10px);
 
   z-index:1000;
@@ -49,25 +53,7 @@ body{
   letter-spacing:2px;
 }
 
-/* MOBILE */
-
-@media(max-width:768px){
-
-.topbar{
-  padding:20px;
-}
-
-.title{
-  font-size:11px;
-  letter-spacing:2px;
-}
-
-.toggle-btn{
-  padding:8px 14px;
-  font-size:10px;
-}
-
-  /* HERO */
+/* HERO */
 
 .hero{
   min-height:100vh;
@@ -85,13 +71,13 @@ body{
 
 .avatars{
   display:flex;
+
   justify-content:center;
   align-items:flex-end;
+
   gap:40px;
 
   width:100%;
-
-  flex-wrap:nowrap;
 }
 
 .avatar img{
@@ -162,22 +148,35 @@ body{
 
 @media(max-width:768px){
 
-.avatars{
-  gap:10px;
-}
+  .topbar{
+    padding:20px;
+  }
 
-.avatar img{
-  height:180px;
-}
+  .title{
+    font-size:11px;
+    letter-spacing:2px;
+  }
 
-.music-player{
-  padding:20px;
-}
+  .toggle-btn{
+    padding:8px 14px;
+    font-size:10px;
+  }
 
-.song-info h3{
-  font-size:18px;
-}
+  .avatars{
+    gap:10px;
+    padding:0 10px;
+  }
 
-}
+  .avatar img{
+    height:180px;
+  }
+
+  .music-player{
+    padding:20px;
+  }
+
+  .song-info h3{
+    font-size:18px;
+  }
 
 }
