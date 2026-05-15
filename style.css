@@ -65,6 +65,8 @@ body{
   align-items:center;
 
   padding-top:120px;
+
+  position:relative;
 }
 
 /* AVATARS */
