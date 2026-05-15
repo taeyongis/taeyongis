@@ -81,7 +81,8 @@ body{
 }
 
 .avatar img{
-  height:420px;
+  width:100%;
+max-width:220px;
 
   object-fit:contain;
 
@@ -179,4 +180,11 @@ body{
     font-size:18px;
   }
 
+}
+
+.avatar{
+  width:200px;
+
+  display:flex;
+  justify-content:center;
 }
