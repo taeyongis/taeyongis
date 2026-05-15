@@ -23,7 +23,7 @@ body{
 
   box-sizing:border-box;
 
-  background:#F2F2F2;
+  background:rgba(255,255,255,0.5);
 
   backdrop-filter:blur(10px);
 
