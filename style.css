@@ -80,6 +80,8 @@ body{
   gap:40px;
 
   width:100%;
+
+  transition:transform 0.5s ease;
 }
 
 .avatar img{
