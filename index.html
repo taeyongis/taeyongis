@@ -23,43 +23,43 @@
 
 </header>
 
-  <main class="hero">
+<main class="hero">
 
-    <div class="carousel-container">
+  <div class="carousel-container">
 
-<button class="arrow left-arrow">
-  ←
-</button>
+    <button class="arrow left-arrow">
+      ←
+    </button>
 
-<button class="arrow right-arrow">
-  →
-</button>
+    <button class="arrow right-arrow">
+      →
+    </button>
 
-  <div class="avatars">
+    <div class="avatars">
 
-    <div class="avatar">
-      <img src="images/wyld.png">
-    </div>
+      <div class="avatar">
+        <img src="images/wyld.png">
+      </div>
 
-    <div class="avatar">
-      <img src="images/shalala.png">
-    </div>
+      <div class="avatar">
+        <img src="images/shalala.png">
+      </div>
 
-    <div class="avatar">
-      <img src="images/tap.png">
-    </div>
+      <div class="avatar">
+        <img src="images/tap.png">
+      </div>
 
-    <div class="avatar">
-      <img src="images/nct.png">
-    </div>
+      <div class="avatar">
+        <img src="images/nct.png">
+      </div>
 
-    <div class="avatar">
-      <img src="images/neo.png">
+      <div class="avatar">
+        <img src="images/neo.png">
+      </div>
+
     </div>
 
   </div>
-
-      </div>
 
   <div class="music-player">
 
@@ -77,6 +77,8 @@
 </main>
 
 <script>
+
+/* WORD ANIMATION */
 
 const words = [
   "ART",
@@ -102,6 +104,31 @@ const interval = setInterval(() => {
   }
 
 }, 1500);
+
+/* CAROUSEL */
+
+const avatars = document.querySelector(".avatars");
+
+const leftArrow = document.querySelector(".left-arrow");
+const rightArrow = document.querySelector(".right-arrow");
+
+let currentSlide = 0;
+
+rightArrow.addEventListener("click", () => {
+
+  currentSlide--;
+
+  avatars.style.transform = `translateX(${currentSlide * 220}px)`;
+
+});
+
+leftArrow.addEventListener("click", () => {
+
+  currentSlide++;
+
+  avatars.style.transform = `translateX(${currentSlide * 220}px)`;
+
+});
 
 </script>
 
