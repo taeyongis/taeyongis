@@ -4,7 +4,7 @@ window.onload = function () {
 
   const words = [
     "ART",
-    "VISIONARY"
+    "VISIONARY",
     "NEO",
     "SHALALA",
     "TAP",
