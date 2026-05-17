@@ -25,8 +25,6 @@ body{
 
   background:#F2F2F2;
 
-  backdrop-filter:blur(10px);
-
   z-index:1000;
 }
 
@@ -69,6 +67,18 @@ body{
   position:relative;
 }
 
+/* CAROUSEL */
+
+.carousel-container{
+  position:relative;
+
+  width:100%;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
 /* AVATARS */
 
 .avatars{
@@ -81,12 +91,23 @@ body{
 
   width:100%;
 
-  transition:transform 0.5s ease;
+  transition:0.5s ease;
+}
+
+.avatar{
+  width:220px;
+  height:420px;
+
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+
+  overflow:hidden;
 }
 
 .avatar img{
   width:100%;
-max-width:220px;
+  height:100%;
 
   object-fit:contain;
 
@@ -99,6 +120,43 @@ max-width:220px;
 
 .avatar img:hover{
   transform:translateY(-20px) scale(1.03);
+}
+
+/* ARROWS */
+
+.arrow{
+  position:absolute;
+
+  top:50%;
+  transform:translateY(-50%);
+
+  background:transparent;
+  border:none;
+
+  color:black;
+
+  font-size:50px;
+
+  cursor:pointer;
+
+  opacity:0.6;
+
+  transition:0.3s ease;
+
+  z-index:20;
+}
+
+.arrow:hover{
+  opacity:1;
+  transform:translateY(-50%) scale(1.2);
+}
+
+.left-arrow{
+  left:40px;
+}
+
+.right-arrow{
+  right:40px;
 }
 
 /* PLAYER */
@@ -172,8 +230,9 @@ max-width:220px;
     padding:0 10px;
   }
 
-  .avatar img{
-    height:180px;
+  .avatar{
+    width:120px;
+    height:220px;
   }
 
   .music-player{
@@ -184,59 +243,16 @@ max-width:220px;
     font-size:18px;
   }
 
-}
+  .arrow{
+    font-size:35px;
+  }
 
-.avatar{
-  width:200px;
+  .left-arrow{
+    left:10px;
+  }
 
-  display:flex;
-  justify-content:center;
-  align-items:flex-end;
-}
+  .right-arrow{
+    right:10px;
+  }
 
-/* ARROWS */
-
-.arrow{
-  position:absolute;
-
-  top:50%;
-  transform:translateY(-50%);
-
-  background:transparent;
-  border:none;
-
-  color:black;
-
-  font-size:50px;
-
-  cursor:pointer;
-
-  opacity:0.6;
-
-  transition:0.3s ease;
-
-  z-index:20;
-}
-
-.arrow:hover{
-  opacity:1;
-  transform:translateY(-50%) scale(1.2);
-}
-
-.left-arrow{
-  left:40px;
-}
-
-.right-arrow{
-  right:40px;
-}
-
-.carousel-container{
-  position:relative;
-
-  width:100%;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
 }
