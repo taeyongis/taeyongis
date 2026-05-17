@@ -246,13 +246,13 @@ body{
     height:220px;
   }
 
-  .music-player{
-    padding:20px;
-  }
+  .stream-grid{
+  grid-template-columns:1fr;
+}
 
-  .song-info h3{
-    font-size:18px;
-  }
+.stream-section{
+  padding:0 20px 60px;
+}
 
   .arrow{
     font-size:35px;
